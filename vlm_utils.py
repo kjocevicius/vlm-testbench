@@ -31,7 +31,7 @@ def get_device_info():
     return device
 
 
-def load_test_images(images_dir: str = "test_images") -> List[Path]:
+def load_test_images(images_dir: str = "../test_images") -> List[Path]:
     """Load all test images from directory."""
     test_images_dir = Path(images_dir)
     image_files = (
