@@ -29,6 +29,7 @@ This testbench includes 3 diverse VLMs from the Hugging Face hub:
 - **Best for:** Chat-optimized responses, good accuracy
 - **License:** Permissive
 - **Requirements:** ~8GB RAM/VRAM
+- **Note:** Currently falls back to CPU on Apple Silicon (MPS compatibility issues)
 
 ### 3. LLaVA 1.6 Mistral (7B params)
 - **Model:** `llava-hf/llava-v1.6-mistral-7b-hf`
