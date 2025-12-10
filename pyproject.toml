@@ -1,0 +1,17 @@
+[project]
+name = "vlm-testbench"
+version = "0.1.0"
+description = "Vision Language Model Testing Bench"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.40.0",
+    "pillow>=10.0.0",
+    "jupyter>=1.0.0",
+    "ipykernel>=6.29.0",
+    "accelerate>=0.27.0",
+    "requests>=2.31.0",
+    "pyvips>=2.2.0",
+    "einops>=0.7.0",
+]
