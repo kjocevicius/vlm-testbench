@@ -8,7 +8,7 @@ Vision Language Model testing environment with Jupyter notebooks. All models run
 vlm-testbench/
 ├── vlm_utils.py           # Shared utilities and helper functions
 ├── moondream_test.ipynb   # Moondream2 model testing
-├── deepseek_test.ipynb    # DeepSeek-VL-Chat model testing
+├── kosmos2_test.ipynb     # KOSMOS-2 model testing
 ├── llava_test.ipynb       # LLaVA 1.6 Mistral model testing
 └── test_images/           # Place your test images here
 ```
@@ -23,13 +23,12 @@ This testbench includes 3 diverse VLMs from the Hugging Face hub:
 - **Best for:** Fast inference, CPU-friendly, quick testing
 - **License:** Permissive
 
-### 2. DeepSeek-VL-Chat (7B params)
-- **Model:** `deepseek-ai/deepseek-vl-7b-chat`
-- **Size:** 7B parameters, ~14GB disk space
-- **Best for:** Chat-optimized responses, good accuracy
-- **License:** Permissive
-- **Requirements:** ~8GB RAM/VRAM
-- **Note:** Currently falls back to CPU on Apple Silicon (MPS compatibility issues)
+### 2. KOSMOS-2 (~2B params)
+- **Model:** `microsoft/kosmos-2-patch14-224`
+- **Size:** ~2B parameters, ~4GB disk space
+- **Best for:** Grounding, zero-shot object detection, referring expression comprehension
+- **License:** Permissive (MIT)
+- **Requirements:** ~2GB RAM/VRAM
 
 ### 3. LLaVA 1.6 Mistral (7B params)
 - **Model:** `llava-hf/llava-v1.6-mistral-7b-hf`
@@ -46,8 +45,8 @@ All models are:
 ## Requirements
 
 - Python 3.10+
-- ~30GB disk space for all models (or ~4GB for just Moondream2)
-- 8GB+ RAM (16GB+ recommended for 7B models)
+- ~22GB disk space for all models (or ~4GB for just Moondream2)
+- 8GB+ RAM (16GB+ recommended for larger models)
 - GPU with 8GB+ VRAM recommended (but CPU works)
 
 ## Setup
@@ -64,7 +63,7 @@ uv run jupyter notebook
 
 3. Choose a notebook to test:
    - `moondream_test.ipynb` - Start here (smallest, fastest)
-   - `deepseek_test.ipynb` - Chat-optimized model
+   - `kosmos2_test.ipynb` - Grounding & object detection
    - `llava_test.ipynb` - Most capable model
 
 ## Usage
