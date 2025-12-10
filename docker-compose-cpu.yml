@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  triton:
+    image: nvcr.io/nvidia/tritonserver:24.01-py3
+    container_name: vlm-triton-server
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+      - "8002:8002"
+    volumes:
+      - ./triton_models:/models
+      - ~/.cache/huggingface:/root/.cache/huggingface:ro
+    command: tritonserver --model-repository=/models --strict-model-config=false --log-verbose=1
+    shm_size: '2gb'
+    environment:
+      - TRANSFORMERS_CACHE=/root/.cache/huggingface
+      - HF_HOME=/root/.cache/huggingface

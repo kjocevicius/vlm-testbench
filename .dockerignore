@@ -1,0 +1,7 @@
+__pycache__
+*.pyc
+.git
+.DS_Store
+notebooks/.ipynb_checkpoints
+test_images
+uv.lock

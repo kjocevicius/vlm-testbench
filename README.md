@@ -36,10 +36,49 @@ uv run jupyter notebook
 - ~22GB disk space for all models (~4GB for just Moondream2)
 - GPU recommended (Apple Silicon MPS, CUDA), CPU works
 
+**Additional for Triton:**
+- Docker and Docker Compose
+- GPU: NVIDIA GPU with CUDA support (optional, CPU mode available)
+- 4GB+ additional disk space for Triton container
+
 ## Usage
+
+### Direct Model Testing
 
 1. Add test images to `test_images/` folder
 2. Open a notebook (start with `notebooks/moondream_test.ipynb`)
 3. Run cells - models download on first run
 4. Try custom prompts
 5. Compare results across models
+
+### Triton Inference Server
+
+Run models via Triton Inference Server for optimized:
+
+```bash
+# Start Triton server (GPU)
+docker compose up -d
+
+# Start Triton server (CPU only)
+docker compose -f docker-compose-cpu.yml up -d
+
+# Check server status
+docker compose logs -f
+
+# Stop server
+docker compose down
+```
+
+Then open `notebooks/triton_inference.ipynb` to test inference via Triton.
+
+**Triton Features:**
+- Concurrent model serving
+- Dynamic batching
+- Metrics and monitoring
+- Production-ready deployment
+- HTTP/gRPC endpoints (ports 8000/8001)
+
+**Model Repository:** `triton_models/`
+- `moondream2/` - Python backend for Moondream2
+- `kosmos2/` - Python backend for KOSMOS-2
+- `llava/` - Python backend for LLaVA 1.6

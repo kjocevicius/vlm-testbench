@@ -53,3 +53,7 @@ models/
 
 # Test images (uncomment if you don't want to track them)
 # test_images/
+
+# Triton
+triton_models/**/model.py.cache
+triton_models/**/__pycache__/
