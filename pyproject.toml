@@ -15,4 +15,5 @@ dependencies = [
     "requests>=2.31.0",
     "einops>=0.7.0",
     "tritonclient[http]>=2.40.0",
+    "jupytext",
 ]
