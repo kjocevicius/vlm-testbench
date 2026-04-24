@@ -5,6 +5,8 @@ description = "Vision Language Model Testing Bench"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "duckdb>=1.1.0",
+    "numpy>=1.26.0",
     "torch>=2.0.0",
     "torchvision>=0.15.0",
     "transformers>=4.40.0",

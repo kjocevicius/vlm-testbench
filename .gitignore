@@ -39,6 +39,7 @@ uv.lock
 .idea/
 *.swp
 *.swo
+.envrc
 
 # OS
 .DS_Store
@@ -57,3 +58,8 @@ models/
 # Triton
 triton_models/**/model.py.cache
 triton_models/**/__pycache__/
+
+# Generated Pixabay dataset
+datasets/pixabay_clothes/images/
+datasets/pixabay_clothes/metadata.csv
+datasets/pixabay_clothes/metadata.jsonl

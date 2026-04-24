@@ -1,0 +1,8 @@
+image_id,image_filename,label,caption,split
+red-square-1,red_square_1.png,red-square,"A red square centered on a white background.",train
+red-square-2,red_square_2.png,red-square,"A slightly rounded red square icon on a white background.",train
+blue-square-1,blue_square_1.png,blue-square,"A blue square centered on a white background.",train
+blue-square-2,blue_square_2.png,blue-square,"A blue rounded square icon on a white background.",train
+green-circle-1,green_circle_1.png,green-circle,"A green circle centered on a white background.",train
+green-circle-2,green_circle_2.png,green-circle,"A green outlined circle icon on a white background.",train
+sample-photo,sample_photo.jpg,photo,"The original sample photo from the repo for testing embeddings on a natural image.",train
